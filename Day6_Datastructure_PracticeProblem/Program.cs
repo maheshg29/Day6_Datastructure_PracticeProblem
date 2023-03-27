@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Day6_Datastructure_PracticeProblem
         {
             Console.WriteLine("Welcome to Day6 Datastructure PracticeProblem");
             Console.WriteLine("Select any one option for \n 1. Generic Custom Linklist \n 2. GenericStack" +
-                "\n 3. Generic Custom Queue");
+                "\n 3. Generic Custom Queue \n 4. Buil-In LinkList");
             int operation = Convert.ToInt32(Console.ReadLine());
             switch (operation)
             {
@@ -52,6 +53,11 @@ namespace Day6_Datastructure_PracticeProblem
                     integerQueue.Enqueue(40);
                     Console.WriteLine("Peak Element is "+ integerQueue.Peek());
                     // integerQueue.Clear();
+                    break;
+
+                case 4:
+                    BuiltInLinklist.LinkList();
+
                     break;
 
                 default:

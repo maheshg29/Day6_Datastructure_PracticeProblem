@@ -13,7 +13,7 @@ namespace Day6_Datastructure_PracticeProblem
         {
             Console.WriteLine("Welcome to Day6 Datastructure PracticeProblem");
             Console.WriteLine("Select any one option for \n 1. Generic Custom Linklist \n 2. GenericStack" +
-                "\n 3. Generic Custom Queue \n 4. Buil-In LinkList \n 5. Build_In Stack");
+                "\n 3. Generic Custom Queue \n 4. Buil-In LinkList \n 5. Build_In Stack \n 6. Build_In Queue");
             int operation = Convert.ToInt32(Console.ReadLine());
             switch (operation)
             {
@@ -61,6 +61,9 @@ namespace Day6_Datastructure_PracticeProblem
 
                 case 5:
                     BuildInStack.BuildStack();
+                    break;
+                case 6:
+                    BuildInQueue.BuildQueue();
                     break;
 
                 default:

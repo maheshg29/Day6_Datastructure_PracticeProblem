@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day6_Datastructure_PracticeProblem
 {
-    class CustomeGenericLinkList<T>
+    class CustomeGenericLinkList<T> where T : IComparable<T>
     {
         private Node<T> head;
 
@@ -70,6 +70,26 @@ namespace Day6_Datastructure_PracticeProblem
                     return;
                 }
                 currentNode = currentNode.next;
+            }
+        }
+
+        public void InsertInDescendingOrder(T value)
+        {
+            Node<T> newNode = new Node<T>(value);
+
+            // If the list is empty, insert the new node at the head
+            if (head == null)
+            {
+                head = newNode;
+                return;
+            }
+
+            // If the new node should be the new head, insert it at the beginning
+            if (value.CompareTo(head.data) > 0)
+            {
+                newNode.next = head;
+                head = newNode;
+                return;
             }
         }
     }

@@ -13,7 +13,8 @@ namespace Day6_Datastructure_PracticeProblem
         {
             Console.WriteLine("Welcome to Day6 Datastructure PracticeProblem");
             Console.WriteLine("Select any one option for \n 1. Generic Custom Linklist \n 2. GenericStack" +
-                "\n 3. Generic Custom Queue \n 4. Buil-In LinkList \n 5. Build_In Stack \n 6. Build_In Queue");
+                "\n 3. Generic Custom Queue \n 4. Buil-In LinkList \n 5. Build_In Stack \n 6. Build_In Queue" +
+                "\n 7. Link List sorted(descending-order)");
             int operation = Convert.ToInt32(Console.ReadLine());
             switch (operation)
             {
@@ -64,6 +65,16 @@ namespace Day6_Datastructure_PracticeProblem
                     break;
                 case 6:
                     BuildInQueue.BuildQueue();
+                    break;
+                case 7:
+                    CustomeGenericLinkList<int> descendingOrderLinklist = new CustomeGenericLinkList<int>(); //sorted(descending-order)
+                    descendingOrderLinklist.InsertInDescendingOrder(55);
+                    descendingOrderLinklist.InsertInDescendingOrder(66);
+                    descendingOrderLinklist.InsertInDescendingOrder(77);
+                    descendingOrderLinklist.InsertInDescendingOrder(88);
+                    descendingOrderLinklist.InsertInDescendingOrder(99);
+                    descendingOrderLinklist.DisplayList();
+
                     break;
 
                 default:

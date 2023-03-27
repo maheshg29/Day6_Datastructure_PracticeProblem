@@ -11,7 +11,8 @@ namespace Day6_Datastructure_PracticeProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Day6 Datastructure PracticeProblem");
-            Console.WriteLine("Select any one option for \n 1. Generic Custom Linklist \n 2. GenericStack");
+            Console.WriteLine("Select any one option for \n 1. Generic Custom Linklist \n 2. GenericStack" +
+                "\n 3. Generic Custom Queue");
             int operation = Convert.ToInt32(Console.ReadLine());
             switch (operation)
             {
@@ -40,9 +41,18 @@ namespace Day6_Datastructure_PracticeProblem
                     integerStack.Pop();
                     Console.WriteLine("Peek value " + integerStack.Peek());
                     //integerStack.Clear();
-                    //Console.WriteLine("Peek value " + integerStack.Peek());
+                    //Console.WriteLine("Peek value " + integerStack.Peek());                 
+                    break;
 
-                    break;  
+                case 3:
+                    GenericQueue<int> integerQueue = new GenericQueue<int>();
+                    integerQueue.Enqueue(10);
+                    integerQueue.Enqueue(20);
+                    Console.WriteLine("Dequeue Element "+ integerQueue.Dequeue()); 
+                    integerQueue.Enqueue(40);
+                    Console.WriteLine("Peak Element is "+ integerQueue.Peek());
+                    // integerQueue.Clear();
+                    break;
 
                 default:
                     Console.WriteLine("Please Enter Valid Option");
